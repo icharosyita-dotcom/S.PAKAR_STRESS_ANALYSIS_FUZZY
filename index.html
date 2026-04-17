@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Stres - Tabel Aspek & Gejala</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <div id="welcome-page" class="welcome-container">
+        <div class="welcome-content">
+            <h1 class="welcome-title">Selamat Datang</h1>
+            <p class="welcome-subtitle">Sistem Deteksi Stres berdasarkan Dataset Gejala Aspek</p>
+            <button id="start-btn" class="start-btn">Mulai Tes Stres</button>
+        </div>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="quiz-container" style="display: none;">
+        <div class="quiz-header">
+            <button id="back-btn" class="back-btn">← Kembali</button>
+            <h2 id="question-title">Pertanyaan</h2>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <span id="progress-text">0/9</span>
+        </div>
+        
+        <div class="question-container">
+            <h3 id="question-text"></h3>
+            <div class="options">
+                <label class="option"><input type="radio" name="answer" value="0"> Tidak Pernah</label>
+                <label class="option"><input type="radio" name="answer" value="1"> Jarang</label>
+                <label class="option"><input type="radio" name="answer" value="2"> Kadang-kadang</label>
+                <label class="option"><input type="radio" name="answer" value="3"> Sering</label>
+                <label class="option"><input type="radio" name="answer" value="4"> Selalu</label>
+            </div>
+            <button id="next-btn" class="next-btn" disabled>Selanjutnya</button>
+        </div>
+    </div>
+
+    <!-- Result Page -->
+    <div id="result-page" class="result-container" style="display: none;">
+        <div class="result-content">
+            <h2>Hasil Deteksi Stres</h2>
+            <div id="result-chart" class="result-chart"></div>
+            <div id="result-details"></div>
+            <button id="restart-btn" class="restart-btn">Tes Ulang</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
